@@ -1,0 +1,33 @@
+/*全局变量*/
+:root{
+	/*background*/
+	--cb:red;
+	--hb:red;
+	--ab:red;
+	/*color*/
+	--cc:red;
+	--hc:red;
+	--ac:red;
+	/*border*/
+	--cbr:red;
+	--hbr:red;
+	--abr:red;
+	/*shadow*/
+	--cs:red;
+	--hs:red;
+	--as:red;
+}
+/*全局样式*/
+*{
+	padding: 0;
+	margin: 0;
+	outline:var(--as) 1px solid;
+}
+
+@media screen and (max-width: 1024px){
+	
+}
+
+@media screen and (min-width: 1025px){
+	
+}
