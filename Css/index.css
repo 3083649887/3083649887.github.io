@@ -1,6 +1,9 @@
 /*全局变量*/
 :root{
-
+	/*body背景色,夜间模式为 rgba(0,36,57,1.00) */
+	--bodyC:honeydew;
+	/*顶部背景色，夜间模式为 rgba(0,50,98,1.00) */
+	--TOPC:white;
 }
 
 /*全局样式*/
@@ -43,12 +46,16 @@ html{
 
 	}
 	
+	.body{
+		background-color:var(--bodyC);
+	}
 	
 /*顶栏样式*/
 	#TOP{
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		background-color: var(--TOPC);
 	}
 /*logo*/
 	#logoimg{
@@ -59,6 +66,8 @@ html{
 	#toptext{
 		padding: 6px;
 		flex: 1;
+		font-size: 24px;
+		font-weight:bolder;
 	}
 /*右方文本*/
 	#sets{
@@ -103,9 +112,27 @@ html{
 
 /*中间页面*/
 	#MIDM{
+		display: flex;
+		flex-direction: column;
+		padding: 8px;
 		flex:1;
+		background-color: blue;
 	}
-
+	#MIDMT{
+		flex: 1;
+	}
+	#MIDMhr{
+		margin: 8px 0px;
+		height: 2px;
+		background-color: green;
+	}
+	#MIDMB{
+		display: flex;
+		flex-direction: row;
+	}
+	#msg{
+		width: 250px;
+	}
 /*右边侧边栏*/
 	#MIDR{
 		width: 15%;
