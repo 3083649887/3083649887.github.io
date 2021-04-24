@@ -20,6 +20,30 @@ html{
 
 /*PC样式*/
 @media screen and (min-width: 1025px){
+
+/*滚动条*/	
+	/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+	::-webkit-scrollbar{
+		width: 8px;
+	}
+	
+	/*定义滚动条轨道角*/
+	::-webkit-scrollbar-track{
+		background-color: blue;
+		border-radius: 10px;
+	}
+ 
+	/*定义滑块*/
+	::-webkit-scrollbar-thumb{
+		border-radius: 10px;
+		background-color: red;
+	}
+	/*箭头按钮*/
+	::-webkit-scrollbar-button{
+
+	}
+	
+	
 /*顶栏样式*/
 	#TOP{
 		display: flex;
@@ -46,10 +70,11 @@ html{
 /*主体样式*/
 	#MID{
 		display: flex;
-		height: calc(100% - 76px);
+		height: calc(100% - 76px - 16px);
 	}
 	.mid{
-		overflow-y:auto;
+		margin: 8px;
+		border-radius: 16px;
 	}
 /*目录栏*/
 	#MIDL{
@@ -57,21 +82,23 @@ html{
 		width: 15%;
 		flex-direction:column;
 		background-color:green;
-		padding: 32px 0px;
 	}
-	#MIDLL{
+	#MIDLT{
 		display: flex;
-		flex-direction: column;
-		margin: auto 8px;
 	}
+	#MIDLB{
+		overflow-y:auto;
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		margin: 16px 8px;
+	}
+
 /*目录展开收起按钮*/
 	#showhide{
 		margin:6px 6px 6px auto;
-		height: 32px;
-		width: 32px;
-	}
-	.blockt,.menus{
-		padding: 6px;		
+		height: 24px;
+		width: 24px;
 	}
 
 /*中间页面*/
@@ -83,10 +110,22 @@ html{
 	#MIDR{
 		width: 15%;
 	}
-
+/*底部*/
+	#BOT{
+		height: 16px;
+	}
 }
 
 
 @media screen and (max-width: 1024px){
 
+}
+
+/*目录页面样式*/
+#MIDLL{
+
+}
+
+.blockt,.menus{
+	padding:6px;
 }

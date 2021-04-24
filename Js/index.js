@@ -1,5 +1,3 @@
 $(document).ready(function(){
-	$("#MIDL").load("./Rec/Pages/ME.html");
-	
-})
-	
+	$("#MIDLB").load("./Rec/Pages/ME.html");
+})	
