@@ -84,10 +84,10 @@ html{
 	.mid{
 		margin: 8px;
 		border-radius: 16px;
+		display: flex;
 	}
 /*目录栏*/
 	#MIDL{
-		display: flex;
 		width: 15%;
 		flex-direction:column;
 		background-color:green;
@@ -112,7 +112,6 @@ html{
 
 /*中间页面*/
 	#MIDM{
-		display: flex;
 		flex-direction: column;
 		padding: 8px;
 		flex:1;
@@ -131,11 +130,24 @@ html{
 		flex-direction: row;
 	}
 	#msg{
-		width: 250px;
+		display: flex;
+		align-items: center;
+	}
+	.Btns{
+		margin: 2px 6px;
+		padding: 4px 6px;
+		border-radius: 12px;
+		border: black solid 2px;
+		box-shadow: 2px 2px 6px grey;
 	}
 /*右边侧边栏*/
 	#MIDR{
 		width: 15%;
+		background-color: purple;
+	}
+	#MIDRR{
+		flex: 1;
+		margin: 8px;
 	}
 /*底部*/
 	#BOT{
