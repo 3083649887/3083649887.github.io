@@ -49,6 +49,8 @@ html{
 	}
 	
 	.body{
+		display: flex;
+		flex-direction: column;
 		background-color:RGB(21, 24, 39);
 	}
 	p{
@@ -86,7 +88,7 @@ html{
 /*主体样式*/
 	#MID{
 		display: flex;
-		height: calc(100% - 76px);
+		flex: 1;
 	}
 	.mid{
 		margin: 8px;
