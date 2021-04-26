@@ -47,7 +47,10 @@ html{
 	::-webkit-scrollbar-button{
 
 	}
-	
+	html{
+		display: flex;
+		flex-direction: column;
+	}
 	.body{
 		display: flex;
 		flex-direction: column;
