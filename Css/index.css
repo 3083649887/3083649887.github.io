@@ -91,7 +91,7 @@ html{
 /*主体样式*/
 	#MID{
 		display: flex;
-		height: calc(100% - 76px);
+		height: calc(100% - 73px);
 		min-height: 300px;
 	}
 	.mid{
