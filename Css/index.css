@@ -91,10 +91,11 @@ html{
 /*主体样式*/
 	#MID{
 		display: flex;
-		flex: 1;
+		height: calc(100% - 76px);
+		min-height: 300px;
 	}
 	.mid{
-		margin: 8px;
+		margin: 16px;
 		border-radius: 16px;
 		display: flex;
 		background:RGB(26, 31, 50);
@@ -126,6 +127,7 @@ html{
 	#MIDM{
 		flex-direction: column;
 		padding: 8px;
+		margin: 16px 0px;
 		flex:1;
 	}
 	#MIDMT{
