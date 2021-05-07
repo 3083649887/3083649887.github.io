@@ -1,210 +1,63 @@
-/*全局变量*/
-:root{
-	/*文字颜色，夜间模式为 RGBa(208, 212, 230,1.00) */
-	--textC:RGBa(208, 212, 230,1.00);
-	/*body背景色,夜间模式为 RGBa(21, 24, 39,1.00) */
-	--bodyC:;
-	/*顶部及卡片背景色，夜间模式为 RGBa(26, 31, 50，1.00) */
-	--TOPC:;
-	/*主题背景色，夜间模式为 RGBa(26, 31, 50,1.00) */
-	--MIDC:;
-	/*滚动条滑块，夜间模式为 RGBa(39, 44, 63,1.00) */
-	--color1:hsla(228,24%,44%,1.00);
-}
-
-/*全局样式*/
 *{
 	padding: 0;
 	margin: 0;
-	outline:none;
+	outline: red 1px solid;
 }
-html{
+html,body{
 	width: 100%;
 	height: 100%;
+	min-height: 300px;
 }
-.body{
-	width: 100%;
-	height: 100%;
-}
-
-/*PC样式*/
-@media screen and (min-width: 1025px){
-
-/*滚动条*/	
-	/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
-	::-webkit-scrollbar{
-    	width: 6px;
-    	background-color:hsla(230,30%,12%,1.00);
-		border-radius: 3px;
+@media (min-width: 1025px){
+	#hover{
+		display: none;
+		background-color:rgba(0,0,0,0.5);
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
 	}
-	
-	/*定义滚动条轨道角*/
-	::-webkit-scrollbar-track{
-
-	}
- 
-	/*定义滑块*/
-	::-webkit-scrollbar-thumb{
-		border-radius: 6px;
-    	background-color: var(--color1);
-	}
-
-	html{
+	#body{
 		display: flex;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(218,255,252,1.00);
+	}
+	#left{
+		display: flex;
+		width: 18%;
+		height: 100%;
+		justify-content: center;
+		align-items: flex-start;
 		flex-direction: column;
 	}
-	.body{
-		display: flex;
-		flex-direction: column;
-		background-color:RGBa(21, 24, 39,1.00);
-	}
-	p,div,.Btns{
-		color:var(--textC);
-	}
-/*顶栏样式*/
-	#TOP{
+	#Ltop,#Lbot,#Lmid{
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color:RGBa(26, 31, 50,1.00);
+		width: 100%;
 	}
-/*logo*/
-	#logoimg{
-		padding: 6px;
-		height: 64px;
+	#Ltop{}
+	#Llogo{
+		width: 80%;
 	}
-/*中部文本*/
-	#toptext{
-		padding: 6px;
-		flex: 1;
-		font-size: 24px;
-		font-weight:bolder;
-	}
-/*右方文本*/
-	#sets{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: auto 6px;
-	}
-/*主体样式*/
-	#MID{
-		display: flex;
-		height: calc(100% - 73px);
-		min-height: 300px;
-	}
-	.mid{
-		margin: 16px;
-		border-radius: 16px;
-		display: flex;
-		background:RGBa(26, 31, 50,1.00);
-	}
-/*目录栏*/
-	#MIDL{
-		width: 15%;
-		flex-direction:column;
-	}
-	#MIDLT{
-		display: flex;
-	}
-	#MIDLB{
-		overflow-y:auto;
-		display: flex;
-		flex: 1;
-		flex-direction: column;
-		margin: 16px 8px;
-	}
-
-/*目录展开收起按钮*/
-	#showhide{
-		margin:6px 6px 6px auto;
-		height: 24px;
-		width: 24px;
-	}
-
-/*中间页面*/
-	#MIDM{
-		flex-direction: column;
-		padding: 8px;
-		margin: 16px 0px;
-		flex:1;
-	}
-	#MIDMT{
+	#Lmid{
 		flex: 1;
 	}
-	#MIDMhr{
-		margin: 8px 0px;
-		height: 2px;
-		background-color:var(--color1) ;
-	}
-	#MIDMB{
-		display: flex;
-		flex-direction: row;
-	}
-	#msg{
-		display: flex;
-		align-items: center;
-	}
-	.Btns{
-		margin: 2px 6px;
-		padding: 4px 6px;
-		border-radius: 12px;
-		border:RGBa(39, 44, 63,1.00) solid 2px;
-		background-color:var(--color1);
-	}
-/*右边侧边栏*/
-	#MIDR{
-		width: 15%;
-	}
-	#MIDRR{
-		flex: 1;
+	#menubar{
 		margin: 8px;
+		height: calc(100% - 16px);
+		width: 100%;
 	}
-/*底部*/
-	#BOT{
-		height: 16px;
+	#Lbot{
+		height: 32px;
+	}
+	#right{
+		flex: 1;
 	}
 }
 
-
-@media screen and (max-width: 1024px){
-
-}
-
-/*目录页面样式*/
-#MIDLL{
-
-}
-
-.blockt,.menus{
-	padding:6px;
-}
-.block{
-	margin: 3px 0px;
-	cursor: default;
-}
-.blockt{
-	font-weight: bolder;
-	border-left: 8px var(--color1) solid;
-	background-color: hsla(228,24%,44%,0.2);
-	transition: all 0.5s;
-}
-
-.menus{
-	padding-left: 1em;
-	border-left: 8px RGBa(0,0,0,0) solid;
-	transition: all 1s;
-}
-.menus:hover{
-	font-size: 1.25em;
-	font-weight: bolder;
-	background-color:rgba(85,96,139,0.2);
-	border-left: 8px var(--color1) solid;
-	cursor: pointer;
-	transition: all 0.1s;
-}
-.menus:active{
-	background-color: hsla(228,24%,44%,0.2);
-	border-left:rgba(70,170,70,1.00) 8px solid;
-	transition: all 0.1s;
+@media (max-width: 1024px){
+	
 }
