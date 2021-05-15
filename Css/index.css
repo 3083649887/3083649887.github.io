@@ -1,3 +1,5 @@
+@import"../Pages/CSS/menus.css";
+
 *{
 	padding: 0;
 	margin: 0;
@@ -9,20 +11,59 @@ html,body{
 	min-height: 300px;
 }
 @media (min-width: 1025px){
+  /*::-webkit-scrollbar 滚动条整体部分，可以设置宽度啥的
+	::-webkit-scrollbar-button 滚动条两端的按钮
+	::-webkit-scrollbar-track  外层轨道
+ 	::-webkit-scrollbar-track-piece  内层滚动槽
+ 	::-webkit-scrollbar-thumb 滚动的滑块
+	::-webkit-scrollbar-corner 边角
+	::-webkit-resizer 定义右下角拖动块的样式
+	*/
+	::-webkit-scrollbar{
+		width: 6px;
+	}
+	::-webkit-scrollbar-track{
+		border-radius: 2px;
+		background-color: darkgrey;
+	}
+	::-webkit-scrollbar-thumb{
+		border-radius: 2px;
+		background-color: grey;
+	}
+	
 	#hover{
-		display: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		background-color:rgba(0,0,0,0.5);
-		position: absolute;
-		left: 0px;
-		top: 0px;
-		right: 0px;
-		bottom: 0px;
+		position:absolute;
+		width: 100%;
+		height: 100%;
+		backdrop-filter:blur(4px);
+	}
+	#Htost{
+		width: 30%;
+		min-width: 400px;
+		height: 20%;
+		min-height: 300px;
+		background-color: white;
+		border-radius: 12px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	button{
+		width: 60px;
 	}
 	#body{
 		display: flex;
 		width: 100%;
 		height: 100%;
 		background-color: rgba(218,255,252,1.00);
+		overflow-x: auto;
+		overflow-y: auto;
 	}
 	#left{
 		display: flex;
@@ -38,18 +79,23 @@ html,body{
 		align-items: center;
 		width: 100%;
 	}
-	#Ltop{}
+	#Ltop{
+		
+	}
 	#Llogo{
 		width: 80%;
 	}
 	#Lmid{
 		flex: 1;
+		width: 100%;
+		height: 0;
 	}
 	#menubar{
-		margin: 8px;
-		height: calc(100% - 16px);
-		width: 100%;
+		height: 80%;
+		width: 80%;
+		overflow-y: auto;
 	}
+
 	#Lbot{
 		height: 32px;
 	}
