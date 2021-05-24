@@ -8,7 +8,6 @@ $(document).ready(function(){
 		$(".menus").click(function(){
 			pageid = $(this).attr("id");
 			pageurl = "/Pages/HTMLs/" + pageid + ".html";
-			$("#menubar").off("click");
 		})
 	})
 	

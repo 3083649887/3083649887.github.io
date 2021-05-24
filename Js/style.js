@@ -1,9 +1,8 @@
 $(document).ready(function(){
-	$("#menubar").on("click",function(){
+	$("#menubar").one("click",function(){
 		$(".menus").click(function(){
 			$(".menus").css("background-color","");
 			$(this).css("background-color","red");
-			$("#menubar").off("click");
 		})
 	})
 })
